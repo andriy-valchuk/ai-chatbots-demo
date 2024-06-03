@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Azure Chatbot</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://cdn.botframework.com/botframework-webchat/latest/webchat.js"></script>
+</head>
+<body>
+    <div class="container mt-5">
+        <a href="index.html">&#8592; Back</a>
+        <div class="row justify-content-center">
+            <div class="text-center">
+                <h1>Azure Chatbot</h1>
+                <div id="webchat" role="main"></div>
+                <script>
+                    const styleOptions = {
+                        botAvatarInitials: 'TB',
+                        userAvatarInitials: 'You'
+                    };
+
+                    window.WebChat.renderWebChat(
+                        {
+                            directLine: window.WebChat.createDirectLine({ secret: '<DEMO_AZURE_CHATBOT_DIRECT_LINE_SECRET>' }),
+                            styleOptions
+                        },
+                        document.getElementById('webchat')
+                    );
+                </script>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
